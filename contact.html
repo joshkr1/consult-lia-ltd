@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - LIA Consultancy Ltd</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <img src="images/logo.png" class="logo" alt="LIA Consultancy Logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="foundation.html">Foundation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="themeToggle" class="icon-btn">🌓</button></li>
+      <li><button id="loginBtn" class="btn">Login</button></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="min-height: 40vh;">
+    <h1>Contact Us</h1>
+    <p>Get in touch – we're ready to help with your EHSQ needs</p>
+  </section>
+
+  <section class="container">
+    <div class="contact-grid">
+      <!-- Contact Form with Formspree integration -->
+      <div class="card">
+        <h2>Send a Message</h2>
+        <p class="muted">Fill out the form below and we'll respond within 24 hours.</p>
+        <form action="https://formspree.io/f/mldprnvd" method="POST" class="form">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interest</label>
+            <select id="service" name="service">
+              <option value="">Select a service</option>
+              <option value="environmental">Environmental Management</option>
+              <option value="safety">Health & Safety</option>
+              <option value="quality">Quality Management</option>
+              <option value="compliance">Regulatory Compliance</option>
+              <option value="training">Training & Capacity Building</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your requirements..."></textarea>
+          </div>
+          <div class="form-row">
+            <button class="btn primary" type="submit">Send Message</button>
+            <button class="btn ghost" type="reset">Clear Form</button>
+          </div>
+          <div id="contactNotice" class="small muted mt-12"></div>
+        </form>
+      </div>
+
+      <!-- Contact Information -->
+      <div>
+        <div class="card">
+          <h3>Get In Touch</h3>
+          <div class="contact-method">
+            <div class="contact-icon">📧</div>
+            <div><strong>Email</strong><br><a href="mailto:info@consultlialtd.com">info@consultlialtd.com</a><br><span class="small muted">We respond within 24h</span></div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">📞</div>
+            <div><strong>Phone</strong><br><a href="tel:+2348064592426">08064592426</a><br><span class="small muted">Mon-Fri, 8am - 5pm</span></div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">📍</div>
+            <div><strong>Location</strong><br>Lagos, Nigeria<br><span class="small muted">Serving clients across Nigeria and internationally</span></div>
+          </div>
+        </div>
+
+        <div class="card mt-20">
+          <h4>Office Hours</h4>
+          <div class="hours-item"><span>Monday - Friday</span><span>8:00 AM - 5:00 PM</span></div>
+          <div class="hours-item"><span>Saturday</span><span>9:00 AM - 1:00 PM</span></div>
+          <div class="hours-item"><span>Sunday</span><span>Closed</span></div>
+        </div>
+
+        <div class="card mt-20">
+          <h4>Quick Links</h4>
+          <div class="quick-actions">
+            <a href="services.html" class="btn small ghost">Our Services</a>
+            <a href="certifications.html" class="btn small ghost">Certifications</a>
+            <a href="foundation.html" class="btn small ghost">LIA Care Foundation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map placeholder (optional) -->
+    <div class="card mt-40">
+      <h3>Find Us</h3>
+      <div style="background: var(--accent); height: 250px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center;">
+        <p class="muted">📍 Interactive map – Lagos, Nigeria</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 LIA Consultancy Ltd | <a href="mailto:info@consultlialtd.com">info@consultlialtd.com</a> | +234 806 459 2426</p>
+  </div>
+</footer>
+
+<!-- Auth Modal (Login / Register) -->
+<div id="authModal" class="modal">
+  <div class="modal-panel">
+    <button class="modal-close" id="authClose">×</button>
+    <div class="auth-tabs">
+      <button id="showLogin" class="tab active">Login</button>
+      <button id="showRegister" class="tab">Register</button>
+    </div>
+    <div id="loginView" class="auth-view active">
+      <form id="loginForm">
+        <div class="form-group"><label>Email</label><input id="login-email" type="email" required></div>
+        <div class="form-group"><label>Password</label><input id="login-pass" type="password" required></div>
+        <button class="btn" type="submit">Login</button>
+        <div id="loginNotice" class="small muted mt-20"></div>
+      </form>
+    </div>
+    <div id="registerView" class="auth-view">
+      <form id="registerForm">
+        <div class="form-group"><label>Full Name</label><input id="reg-name" required></div>
+        <div class="form-group"><label>Email</label><input id="reg-email" type="email" required></div>
+        <div class="form-group"><label>Phone</label><input id="reg-phone"></div>
+        <div class="form-group"><label>Password</label><input id="reg-pass" type="password" required></div>
+        <button class="btn" type="submit">Register</button>
+        <div id="regNotice" class="small muted mt-20"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Dashboard Modal -->
+<div id="dashboardShell" class="dashboard hidden">
+  <div class="dash-sidebar">
+    <div class="dash-brand"><img src="images/logo.png" alt="logo"><span>LIA Consultancy</span></div>
+    <div class="dash-nav">
+      <button data-panel="overview" class="active">Overview</button>
+      <button data-panel="services">My Services</button>
+      <button data-panel="certs">Certificates</button>
+      <button data-panel="profile">Profile</button>
+      <button data-panel="settings">Settings</button>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </div>
+  <div class="dash-content">
+    <div id="panel-overview" class="panel active">
+      <h2>Welcome, <span id="dashName">User</span></h2>
+      <div class="grid-2 mt-20">
+        <div class="card"><h4>Active Services</h4><div id="widgetServices">0</div></div>
+        <div class="card"><h4>Documents</h4><a href="#">SCUML Certificate</a><br><a href="#">Foundation Cert</a></div>
+      </div>
+    </div>
+    <div id="panel-services" class="panel">
+      <h2>My Services</h2>
+      <form id="addServiceForm">
+        <div class="form-group"><label>Title</label><input id="svc-title" required></div>
+        <div class="form-group"><label>Description</label><textarea id="svc-desc" required></textarea></div>
+        <button class="btn" type="submit">Add Service</button>
+        <div id="addSvcNotice" class="small muted mt-12"></div>
+      </form>
+      <div id="serviceList" class="mt-20"></div>
+    </div>
+    <div id="panel-certs" class="panel">
+      <h2>Certificates</h2>
+      <div class="grid-2 mt-20">
+        <div class="card"><h4>SCUML</h4><a href="docs/SCUML_Certificate.pdf" target="_blank">Download</a></div>
+        <div class="card"><h4>LIA Care Foundation</h4><a href="docs/CERTIFICATE_LIA_CARE_FOUNDATION.pdf" target="_blank">Download</a></div>
+      </div>
+    </div>
+    <div id="panel-profile" class="panel">
+      <h2>Profile</h2>
+      <form id="profileForm">
+        <div class="form-group"><label>Name</label><input id="p-name"></div>
+        <div class="form-group"><label>Email</label><input id="p-email" type="email"></div>
+        <div class="form-group"><label>Phone</label><input id="p-phone"></div>
+        <button class="btn" type="submit">Save</button>
+        <div id="profileNotice" class="small muted mt-12"></div>
+      </form>
+    </div>
+    <div id="panel-settings" class="panel">
+      <h2>Settings</h2>
+      <label class="switch"><input id="dashThemeToggle" type="checkbox"><span>Dark Mode</span></label>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+  }
+  .contact-method {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+  }
+  .contact-icon {
+    font-size: 1.5rem;
+    width: 45px;
+    text-align: center;
+  }
+  .hours-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</body>
+</html>
