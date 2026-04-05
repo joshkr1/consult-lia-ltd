@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - LIA Consultancy Ltd</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <img src="images/logo.png" class="logo" alt="LIA Consultancy Logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="foundation.html">Foundation</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="themeToggle" class="icon-btn">🌓</button></li>
+      <li><button id="loginBtn" class="btn">Login</button></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="min-height: 40vh;">
+    <h1>Our Services</h1>
+    <p>Comprehensive EHSQ solutions tailored to your organisation</p>
+  </section>
+
+  <section class="container">
+    <div class="section-head">
+      <h2>What We Offer</h2>
+      <p class="muted">End‑to‑end Environmental, Health, Safety & Quality services</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card"><h3>🌿 Environmental Management</h3><p>Impact assessments, waste & water strategies, sustainability programs, ISO 14001 support.</p><a href="contact.html" class="btn small">Request Assessment</a></div>
+      <div class="card"><h3>🛡️ Health & Safety Consulting</h3><p>Risk assessments, safety audits, HSE policies, ISO 45001 certification support.</p><a href="contact.html" class="btn small">Book Audit</a></div>
+      <div class="card"><h3>📊 Quality Management</h3><p>QMS design, internal audits, ISO 9001 implementation, continual improvement frameworks.</p><a href="contact.html" class="btn small">Improve Quality</a></div>
+      <div class="card"><h3>⚖️ Regulatory Compliance</h3><p>Gap analysis, policy development, statutory reporting across local & international standards.</p><a href="contact.html" class="btn small">Compliance Review</a></div>
+      <div class="card"><h3>🎓 Training & Capacity Building</h3><p>Custom EHSQ training programs to build competence and drive culture change.</p><a href="contact.html" class="btn small">Schedule Training</a></div>
+      <div class="card"><h3>📋 Advisory & Projects</h3><p>Project implementation support — from planning to handover and continual improvement.</p><a href="contact.html" class="btn small">Talk Projects</a></div>
+    </div>
+
+    <div class="section-head mt-40"><h2>How We Work</h2><p class="muted">A structured approach that ensures success</p></div>
+    <div class="grid-3">
+      <div class="card text-center"><h4>1. Assess</h4><p>Understand your current situation and needs</p></div>
+      <div class="card text-center"><h4>2. Plan</h4><p>Develop a tailored roadmap</p></div>
+      <div class="card text-center"><h4>3. Implement</h4><p>Execute with full support</p></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container"><p>© 2025 LIA Consultancy Ltd | <a href="mailto:info@consultlialtd.com">info@consultlialtd.com</a> | +234 806 459 2426</p></div></footer>
+
+<!-- Auth Modal -->
+<div id="authModal" class="modal"><div class="modal-panel"><button class="modal-close" id="authClose">×</button><div class="auth-tabs"><button id="showLogin" class="tab active">Login</button><button id="showRegister" class="tab">Register</button></div><div id="loginView" class="auth-view active"><form id="loginForm"><div class="form-group"><label>Email</label><input id="login-email" type="email" required></div><div class="form-group"><label>Password</label><input id="login-pass" type="password" required></div><button class="btn" type="submit">Login</button><div id="loginNotice" class="small muted mt-20"></div></form></div><div id="registerView" class="auth-view"><form id="registerForm"><div class="form-group"><label>Full Name</label><input id="reg-name" required></div><div class="form-group"><label>Email</label><input id="reg-email" type="email" required></div><div class="form-group"><label>Phone</label><input id="reg-phone"></div><div class="form-group"><label>Password</label><input id="reg-pass" type="password" required></div><button class="btn" type="submit">Register</button><div id="regNotice" class="small muted mt-20"></div></form></div></div></div>
+
+<!-- Dashboard Modal -->
+<div id="dashboardShell" class="dashboard hidden"><div class="dash-sidebar"><div class="dash-brand"><img src="images/logo.png" alt="logo"><span>LIA Consultancy</span></div><div class="dash-nav"><button data-panel="overview" class="active">Overview</button><button data-panel="services">My Services</button><button data-panel="certs">Certificates</button><button data-panel="profile">Profile</button><button data-panel="settings">Settings</button><button id="logoutBtn">Logout</button></div></div><div class="dash-content"><div id="panel-overview" class="panel active"><h2>Welcome, <span id="dashName">User</span></h2><div class="grid-2 mt-20"><div class="card"><h4>Active Services</h4><div id="widgetServices">0</div></div><div class="card"><h4>Documents</h4><a href="docs/SCUML_Certificate.pdf" target="_blank">SCUML Certificate</a><br><a href="docs/CERTIFICATE_LIA_CARE_FOUNDATION.pdf" target="_blank">Foundation Cert</a></div></div></div><div id="panel-services" class="panel"><h2>My Services</h2><form id="addServiceForm"><div class="form-group"><label>Title</label><input id="svc-title" required></div><div class="form-group"><label>Description</label><textarea id="svc-desc" required></textarea></div><button class="btn" type="submit">Add Service</button><div id="addSvcNotice" class="small muted mt-12"></div></form><div id="serviceList" class="mt-20"></div></div><div id="panel-certs" class="panel"><h2>Certificates</h2><div class="grid-2 mt-20"><div class="card"><h4>SCUML</h4><a href="docs/SCUML_Certificate.pdf" target="_blank">Download</a></div><div class="card"><h4>LIA Care Foundation</h4><a href="docs/CERTIFICATE_LIA_CARE_FOUNDATION.pdf" target="_blank">Download</a></div></div></div><div id="panel-profile" class="panel"><h2>Profile</h2><form id="profileForm"><div class="form-group"><label>Name</label><input id="p-name"></div><div class="form-group"><label>Email</label><input id="p-email" type="email"></div><div class="form-group"><label>Phone</label><input id="p-phone"></div><button class="btn" type="submit">Save</button><div id="profileNotice" class="small muted mt-12"></div></form></div><div id="panel-settings" class="panel"><h2>Settings</h2><label class="switch"><input id="dashThemeToggle" type="checkbox"><span>Dark Mode</span></label></div></div></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
