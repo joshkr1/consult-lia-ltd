@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIA Consultancy Ltd – Home</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <img src="images/logo.png" class="logo" alt="LIA Consultancy Logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="foundation.html">Foundation</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="themeToggle" class="icon-btn">🌓</button></li>
+      <li><button id="loginBtn" class="btn">Login</button></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>LIA Consultancy Ltd</h1>
+    <p>Building Safer, Greener, and More Resilient Businesses</p>
+    <a href="services.html" class="btn">Explore Services</a>
+  </section>
+
+  <section class="container grid-3">
+    <div class="card"><h3>Compliance</h3><p>Regulatory and ISO compliance support.</p></div>
+    <div class="card"><h3>Safety</h3><p>Risk assessments and workplace safety systems.</p></div>
+    <div class="card"><h3>Sustainability</h3><p>Environmental and sustainability programs.</p></div>
+  </section>
+
+  <!-- KPI Section -->
+  <section class="kpi-section">
+    <div class="kpi-container">
+      <div class="kpi-item"><div class="kpi-value" data-target="150">0</div><div>Clients Served</div></div>
+      <div class="kpi-item"><div class="kpi-value" data-target="98">0</div><div>Retention Rate</div></div>
+      <div class="kpi-item"><div class="kpi-value" data-target="250">0</div><div>Projects Completed</div></div>
+      <div class="kpi-item"><div class="kpi-value" data-target="15">0</div><div>Years Experience</div></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="section-head"><h2>What Clients Say</h2></div>
+      <div class="testimonial-slider">
+        <div class="testimonial active"><div class="testimonial-text">"Excellent service – transformed our safety culture."</div><div class="testimonial-author">– Manufacturing Client</div></div>
+        <div class="testimonial"><div class="testimonial-text">"Professional and thorough compliance audit."</div><div class="testimonial-author">– Energy Sector</div></div>
+        <div class="testimonial"><div class="testimonial-text">"Highly recommend their ISO implementation support."</div><div class="testimonial-author">– Construction Firm</div></div>
+        <div class="slider-controls"><span class="slider-dot active"></span><span class="slider-dot"></span><span class="slider-dot"></span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container"><p>© 2025 LIA Consultancy Ltd | <a href="mailto:info@consultlialtd.com">info@consultlialtd.com</a> | +234 806 459 2426</p></div></footer>
+
+<!-- Auth Modal -->
+<div id="authModal" class="modal">...</div>
+<!-- Dashboard Modal -->
+<div id="dashboardShell" class="dashboard hidden">...</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
