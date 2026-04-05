@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIA Care Foundation - LIA Consultancy Ltd</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <img src="images/logo.png" class="logo" alt="LIA Consultancy Logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="foundation.html">Foundation</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="themeToggle" class="icon-btn">🌓</button></li>
+      <li><button id="loginBtn" class="btn">Login</button></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="min-height: 40vh;">
+    <h1>LIA Care Foundation</h1>
+    <p>Empowering communities through health, education, and sustainability</p>
+  </section>
+
+  <section class="container">
+    <div class="section-head"><h2>Our Mission</h2><p class="muted">Giving back through meaningful community development</p></div>
+
+    <div class="grid-2">
+      <div class="card"><h3>💚 Health Outreach</h3><p>Mobile health camps, wellness awareness, and support for local clinics to improve community health outcomes.</p></div>
+      <div class="card"><h3>🌱 Environmental Programs</h3><p>Tree planting, waste management education, and conservation initiatives to protect our planet.</p></div>
+      <div class="card"><h3>📚 Training Initiatives</h3><p>Skills development, vocational training, and digital literacy programs for youth and women.</p></div>
+      <div class="card"><h3>🤝 Community Empowerment</h3><p>Partnerships with local organisations to foster sustainable livelihoods and social inclusion.</p></div>
+    </div>
+
+    <div class="card mt-20" style="background: var(--accent);">
+      <h3>Official Registration</h3>
+      <p><strong>Registration Number:</strong> 7939463<br>
+      <strong>Date of Incorporation:</strong> 18th September, 2024<br>
+      <strong>Tax ID:</strong> 32201302-0001<br>
+      <strong>Issuing Authority:</strong> Corporate Affairs Commission, Nigeria</p>
+      <a class="btn small" href="docs/CERTIFICATE_LIA_CARE_FOUNDATION.pdf" target="_blank">View Foundation Certificate</a>
+    </div>
+
+    <div class="section-head mt-40"><h2>Our Impact So Far</h2></div>
+    <div class="grid-3 text-center">
+      <div class="card"><div class="kpi-value" data-target="500">0</div><p>Community Members Reached</p></div>
+      <div class="card"><div class="kpi-value" data-target="15">0</div><p>Projects Completed</p></div>
+      <div class="card"><div class="kpi-value" data-target="5">0</div><p>Partner Communities</p></div>
+    </div>
+
+    <div class="section-head mt-40"><h2>Get Involved</h2><p class="muted">Join us in making a difference</p></div>
+    <div class="grid-3">
+      <div class="card text-center"><h4>🤲 Volunteer</h4><p>Share your time and skills with our community projects.</p><a href="contact.html" class="btn small">Become a Volunteer</a></div>
+      <div class="card text-center"><h4>🤝 Partner</h4><p>Collaborate with us on impactful initiatives.</p><a href="contact.html" class="btn small">Partner With Us</a></div>
+      <div class="card text-center"><h4>❤️ Donate</h4><p>Support our programs financially or in-kind.</p><a href="contact.html" class="btn small">Make a Donation</a></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container"><p>© 2025 LIA Consultancy Ltd | <a href="mailto:info@consultlialtd.com">info@consultlialtd.com</a> | +234 806 459 2426</p></div></footer>
+
+<!-- Auth Modal -->
+<div id="authModal" class="modal"><div class="modal-panel"><button class="modal-close" id="authClose">×</button><div class="auth-tabs"><button id="showLogin" class="tab active">Login</button><button id="showRegister" class="tab">Register</button></div><div id="loginView" class="auth-view active"><form id="loginForm"><div class="form-group"><label>Email</label><input id="login-email" type="email" required></div><div class="form-group"><label>Password</label><input id="login-pass" type="password" required></div><button class="btn" type="submit">Login</button><div id="loginNotice" class="small muted mt-20"></div></form></div><div id="registerView" class="auth-view"><form id="registerForm"><div class="form-group"><label>Full Name</label><input id="reg-name" required></div><div class="form-group"><label>Email</label><input id="reg-email" type="email" required></div><div class="form-group"><label>Phone</label><input id="reg-phone"></div><div class="form-group"><label>Password</label><input id="reg-pass" type="password" required></div><button class="btn" type="submit">Register</button><div id="regNotice" class="small muted mt-20"></div></form></div></div></div>
+
+<!-- Dashboard Modal -->
+<div id="dashboardShell" class="dashboard hidden"><div class="dash-sidebar"><div class="dash-brand"><img src="images/logo.png" alt="logo"><span>LIA Consultancy</span></div><div class="dash-nav"><button data-panel="overview" class="active">Overview</button><button data-panel="services">My Services</button><button data-panel="certs">Certificates</button><button data-panel="profile">Profile</button><button data-panel="settings">Settings</button><button id="logoutBtn">Logout</button></div></div><div class="dash-content"><div id="panel-overview" class="panel active"><h2>Welcome, <span id="dashName">User</span></h2><div class="grid-2 mt-20"><div class="card"><h4>Active Services</h4><div id="widgetServices">0</div></div><div class="card"><h4>Documents</h4><a href="docs/SCUML_Certificate.pdf" target="_blank">SCUML Certificate</a><br><a href="docs/CERTIFICATE_LIA_CARE_FOUNDATION.pdf" target="_blank">Foundation Cert</a></div></div></div><div id="panel-services" class="panel"><h2>My Services</h2><form id="addServiceForm"><div class="form-group"><label>Title</label><input id="svc-title" required></div><div class="form-group"><label>Description</label><textarea id="svc-desc" required></textarea></div><button class="btn" type="submit">Add Service</button><div id="addSvcNotice" class="small muted mt-12"></div></form><div id="serviceList" class="mt-20"></div></div><div id="panel-certs" class="panel"><h2>Certificates</h2><div class="grid-2 mt-20"><div class="card"><h4>SCUML</h4><a href="docs/SCUML_Certificate.pdf" target="_blank">Download</a></div><div class="card"><h4>LIA Care Foundation</h4><a href="docs/CERTIFICATE_LIA_CARE_FOUNDATION.pdf" target="_blank">Download</a></div></div></div><div id="panel-profile" class="panel"><h2>Profile</h2><form id="profileForm"><div class="form-group"><label>Name</label><input id="p-name"></div><div class="form-group"><label>Email</label><input id="p-email" type="email"></div><div class="form-group"><label>Phone</label><input id="p-phone"></div><button class="btn" type="submit">Save</button><div id="profileNotice" class="small muted mt-12"></div></form></div><div id="panel-settings" class="panel"><h2>Settings</h2><label class="switch"><input id="dashThemeToggle" type="checkbox"><span>Dark Mode</span></label></div></div></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
